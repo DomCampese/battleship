@@ -58,7 +58,7 @@ const handlePlayerTwoInput = () => {
         return;
     }
 
-    // Removes the user prompt form the DOM
+    // Removes the user prompt from the DOM
     document.getElementById('player-info-prompt').remove();
 
     playerOneBoard = new GameBoard(playerOneShips, PLAYER_ONE);
