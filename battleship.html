@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BattleShip</title>
+</head>
+
+<body id="body">
+    <h1 id='title'>BattleShip</h1>
+
+    <div id="content">
+
+        <div id="player-info-prompt">
+            <h2 id="input-title">Enter Player 1 Info</h2>
+            <input id="player-name-input" placeholder="Name"/>
+            <input id="player-ship-input" placeholder="Ship Placement"/>
+            <button id="player-done-button">Player 1 Done</button>
+        </div>
+
+        <!--Content of these containers rendered dynamically-->
+        <div id="game-info-display">
+        </div>
+
+        <div id="turn-prompt">
+        </div>
+
+        <div id="gameboard-container">
+        </div>
+            
+        </div>
+    </div>
+
+    <!--Game scripts-->
+    <script src="scripts/BattleShip.js"></script>
+    <script src="scripts/GameBoard.js"></script>
+    <script src="scripts/Validate.js"></script>
+    <script src="scripts/Ship.js"></script>
+
+    <noscript>You need to enable JavaScript to play this game.</noscript>
+
+</body>
+
+</html>

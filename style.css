@@ -1,0 +1,261 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    z-index: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    height: 60px;
+    width: 120px;
+    background-color: rgb(240, 240, 240);
+    margin-top: 15px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: .8px solid black;
+}
+
+#title {
+    font-size: 40px;
+}
+
+/* Where the user enters their info */
+#player-info-prompt {
+    position: relative;
+    top: 15vh;
+    margin-left: 22%;
+    margin-right: 22%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#player-info-prompt input {
+    padding: 10px;
+}
+
+#player-info-prompt input {
+    margin: 2px;
+    font-size: 20px;
+    width: 350px;
+    padding: 10px;
+}
+
+#game-info-display {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#turn-prompt {
+    position: relative;
+    font-size: 30px;
+    top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 20%;
+}
+
+#turn-prompt button {
+    margin-top: 40px;
+    height: 100px;
+    width: 200px;
+    font-size: 35px;
+    border-radius: 8px;
+}
+
+/* Side by side boards */
+#gameboard-container {
+    position: relative;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gameboard {
+    width: 40%;
+    margin: 20px;
+    text-align: center;
+}
+
+.board-title {
+    margin-left: 8.5%;
+    height: 5%;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.gameboard-row {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    line-height:30px;
+}
+
+.gameboard-label-spot {
+    font-size: 10px;
+    width: 10%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    height:auto;
+}
+
+.gameboard-label-spot:before {
+    content:'';
+    float:left;
+    padding-top:100%;
+}
+
+.friendly-gameboard-spot {
+    width: 10%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid black;
+    height:auto;
+}
+
+.enemy-gameboard-spot {
+    width: 10%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid black;
+    height:auto;
+}
+
+.enemy-gameboard-spot::hover {
+    background-color: greenyellow;
+}
+
+.gameboard-spot:before {
+    content:'';
+    float:left;
+    padding-top:100%;
+}
+
+.gameboard-spot:hover {
+    background-color: lightgray;
+}
+
+.error-message {
+    font-size: 18px;
+    background: #ff2764;
+    color: white;
+    padding: 10px;
+    border-radius: 0;
+    position: relative; 
+    margin-top: 10px;
+}
+
+/* Covers all buttons */
+#overlay-container {
+    position: relative;
+    background-color: rgba(73, 73, 73, .4);
+    backdrop-filter: blur(10px);
+    top: 0;
+    height: 110%;
+    width: 100%;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlay-box {
+    font-size: 30px;
+    width: 40%;
+    height: 200px;
+    position: relative;
+    bottom: 60px;
+    background-color: white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#gameover-container {
+    position: relative;
+    top: 20px;
+    height: 30vh;
+    margin-left: 20%;
+    margin-right: 20%;
+
+
+    font-size: 25px;
+    background-color: lightgreen;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mobile style */
+@media screen and (max-width: 570px)  {
+    #player-info-prompt {
+        margin: 5%;
+    }
+
+    /* Vertical boards */
+    #gameboard-container {
+        position: relative;
+        left: 0;
+        margin-right: 20px;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .gameboard {
+        width: 80%;
+        text-align: center;
+    }
+
+    .gameboard-label-spot {
+        font-size: 10px;
+        width: 12%;
+    }
+
+    #overlay-box {
+        width: 90%;
+    }
+
+    #overlay-box button {
+        margin-top: 20px;
+        height: 30%;
+        width: 50%;
+    }
+
+    #gameover-container {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+}
