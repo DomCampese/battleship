@@ -1,7 +1,6 @@
 /**
  * This file contains utility functions for validating a user's name and ship placement 
- * as well as displaying any validation error messages to the user. Might have over done
- * the string parsing (regex, semantics etc).
+ * as well as displaying any validation error messages to the user.
  */
 
 
@@ -103,7 +102,7 @@ const validatePlacementAndInitializeShips = (playerPlacement, isPlayerOne) => {
         return false; 
     }
 
-    /* Populate the player array in BattleShip.js now that they are valid (avoids repeated work) */
+    /* Populate the player array in BattleShip.js now that they are valid */
     if (isPlayerOne) {
         playerOneShips.push(a);
         playerOneShips.push(b);
