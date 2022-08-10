@@ -74,15 +74,13 @@ class Ship {
         return false; 
     }
 
-    /* Returns true if this ship contains the spot (sematically) */
+    /* Returns true if this ship contains the spot (semantically) */
     contains(spot) {
         for (let s of this.spots) {
             if (s.equals(spot)) {
-                // console.log(`Ship: ${this} contains ${spot}`);
                 return true;
             }
         }
-        // console.log(`Ship: ${this} does not contain ${spot}`);
         return false;
     }
 
